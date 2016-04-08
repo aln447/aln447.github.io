@@ -1,0 +1,366 @@
+//COLORS
+$dkbl: #2C3E50
+$red: #E74C3C
+$white: #ECF0F1
+$bl1: #3498DB
+$bl2: #2980B9
+
+//MATERIAL BASED SHADOWS
+$s1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)
+$s2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+$s3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)
+$s4: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+$s5: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
+
+body
+    width: 100%
+    height: 100%
+    margin: 0
+    font-size: 22px
+    color: $dkbl
+    background: $white
+    font-family: 'PT Sans Caption', sans-serif
+
+#container
+    width: 100%
+    overflow: hidden
+    margin: 0
+    background: $white
+
+#tbg
+    width: 100%
+    height: 120%
+    background: $dkbl
+    position: fixed
+    transition: width 0.4s
+
+.maincontent
+    width: 350px
+    height: 400px
+    position: absolute
+    top: calc(40% - 200px)
+    left: calc(50% - 175px)
+    text-align: center
+    color: $white
+    line-height: 35px
+
+.mainctexts
+    font-weight: bold
+    margin-bottom: 35px
+    position: relative
+    top: 5px
+
+.side
+    width: 350px !important
+    box-shadow: $s5
+
+
+h1
+    margin-bottom: -35px
+    font-size: 2em
+
+h2
+    color: $bl1
+    font-size: 1.2em
+    margin-top: 40px
+    margin-bottom: -25px
+
+p
+    text-align: left
+    margin-bottom: -25px
+
+.sb
+    box-shadow: $s1
+    transition: box-shadow 0.2s ease-out
+    cursor: pointer
+
+.sb:hover
+    box-shadow: $s2
+
+.twobox
+    width: 100%
+
+button
+    border: none
+    margin: 5px
+    height: 50px
+    font-size: 0.7em
+    color: $white
+
+button:focus
+    outline: none
+
+
+.link1
+    background: $red
+    width: 165px
+    position: relative
+
+.link1:active
+    background: darken( $red, 10% )
+
+@media(max-width: 365px)
+    body
+        font-size: 19px
+    .maincontent
+        width: 300px
+        left: calc(50% - 150px)
+        line-height: 40px
+        h2
+            margin-top: 30px
+    .link1
+        width: 140px
+#graf
+    float: right
+#www
+    float: left
+
+.link2
+    background: $bl2
+    width: calc(100% - 10px)
+
+.link2:active
+    background: darken( $bl2, 10% )
+
+#behind
+    min-height: 100%
+    width: calc(100% - 350px)
+    position: absolute
+    left: 350px
+
+
+#grafbox, #wwwbox
+    display: none
+    padding: 10px
+    h3
+        color: $dkbl
+        margin-top: 0px
+        //margin-left: 10px
+        width: 100%
+        clear: both
+
+.graffield
+    display: none
+    cursor: pointer
+    img
+        height: 140px
+        width: auto
+        box-shadow: $s1
+        float: left
+        margin: 10px 10px 0px 0px
+
+#preview
+    position: fixed
+    width: 100vw
+    height: 100vh
+    background: rgba(0,0,0,0.4)
+    text-align: center
+    display: none
+
+    img
+        max-width: 90%
+        max-height: 90%
+        display: inline-block
+        margin-top: 20px
+        box-shadow: $s4
+        transform: scale(0.3, 0.3)
+        transition: transform 0.2s ease-out
+
+.scale
+    transform: scale(1,1) !important
+
+.bigimg
+    cursor: pointer
+    z-index: 55555
+    
+
+
+.wwfield
+    display: none
+    width: 40%
+    min-width: 220px
+    position: relative
+    padding-bottom: 20px
+    padding-top: 10px
+    margin: 20px
+    float: left
+    .text
+        width: 100%
+        color: $dkbl
+        font-weight: bold
+        p
+            width: 90%
+            float: left
+            margin-top: 5px
+        .thrd
+            width: 10%
+            float: right
+            color: $bl2
+            text-align: right
+            font-size: 1.3em
+            cursor: pointer
+        .hidtxt
+            display: none
+        span:hover
+            text-decoration: underline
+.prewww
+    width: 100%
+    height: auto
+    display: table-row
+
+.wlink
+    display: block
+
+#expwww
+    width: 500px
+    background: $white
+    box-shadow: $s5
+    position: fixed
+    bottom: 0
+    right: -600px
+    padding: 10px
+    cursor: pointer
+    transition: right 0.4s ease-in-out
+    #closewww
+        font-size: 0.6em
+        font-weight: bold
+    #expcontent
+        margin-bottom: 20px
+
+
+.expexpand
+    right: 0 !important
+
+.bl
+    color: $bl2
+.rd
+    color: $red
+
+.icons
+    position: absolute
+    width: 100%
+    bottom: 0px
+    right: 0
+    height: auto
+#contact
+    position: fixed
+    width: 100%
+    max-width: 640px
+    height: 400px
+    background: $dkbl
+    box-shadow: $s4
+    top: 90%
+    left: calc(50% - 320px)
+    color: $white
+    font-weight: bold
+    padding: 10px
+    transform: rotate(-10deg)
+    opacity: 0
+    transition: all 0.4s ease
+    p
+        margin: 0
+        position: relative
+        left: 10px
+
+#closecont
+    display: none
+
+@media(max-width: 860px)
+    #contact
+        left: 0
+        margin-bottom: 30px
+        overflow: auto
+
+.cappear
+    top: calc(50% - 225px) !important
+    opacity: 1 !important
+    transform: rotate(0deg) !important
+
+
+p.header
+    font-size: 1.5em
+
+.head
+
+    font-size: 0.8em
+    top: 10px
+input
+    width: 300
+textarea
+    width: 90%
+
+
+input, textarea
+    margin: 10px
+    font-size: 1em
+    border-top: none
+    border-left: none
+    border-right: none
+    border-bottom: 2px solid $white
+    font-family: 'PT Sans Caption', sans-serif
+    background: $dkbl
+    color: $white
+    transition: background 0.4s ease-out
+
+input:active, textarea:active, input:focus, textarea:focus
+    background: lighten($dkbl, 2%)
+    outline: none
+
+#send
+    background: $bl2
+    width: 120px
+    height: 50px
+    cursor: pointer
+    box-shadow: $s2
+
+#send:hover
+    background: $bl1
+
+#send:active
+    box-shadow: none
+
+
+
+#arrow
+    position: absolute
+    top: 5px
+    right: 5px
+    transform: rotate(-270deg)
+    opacity: 0
+    transition: opacity 0.2s, transform 0.5s ease
+    pointer-events: none
+
+.arrowspin
+    opacity: 1 !important
+    transform: none !important
+
+
+.close
+    position: absolute
+    width: 100%
+    height: 100%
+    cursor: pointer
+    top: 0
+    left: 0
+
+@media(max-width:670px)
+    .side
+        left: -300px
+    #behind
+        width: calc(100% - 50px)
+        left: 50px
+    .wwfield
+        width: 80%
+    #expwww
+        width: 70%
+        font-size: 1em
+        p
+            margin-bottom: 2px
+
+
+
+
+@media(max-width:500px)
+    #expwww
+        width: 90%
+        font-size: 0.8em
