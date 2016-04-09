@@ -22,8 +22,9 @@ $(document).ready(function(){
     document.addEventListener('backbutton', onBackKeyDown, false);
 
     function onBackKeyDown(event) {
+        event.preventDefault();
         if(contbox.hasClass("cappear")){
-            event.preventDefault();
+
             alert("Ajho!");
             contbox.removeClass("cappear");
         }
