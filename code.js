@@ -19,10 +19,11 @@ $(document).ready(function(){
     //send.on("click", function(){});
 
 
-    document.addEventListener("backbutton", onBackKey, false);
-    function onBackKey(){
-        alert("Gobek!!");
+    document.addEventListener('backbutton', onBackKeyDown, false);
+
+    function onBackKeyDown(event) {
         if(contbox.hasClass("cappear")){
+            event.preventDefault();
             alert("Ajho!");
             contbox.removeClass("cappear");
         }
