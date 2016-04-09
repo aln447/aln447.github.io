@@ -21,7 +21,9 @@ $(document).ready(function(){
 
     document.addEventListener("backbutton", onBackKey, false);
     function onBackKey(){
+        alert("Gobek!!");
         if(contbox.hasClass("cappear")){
+            alert("Ajho!");
             contbox.removeClass("cappear");
         }
     }
