@@ -19,6 +19,13 @@ $(document).ready(function(){
     //send.on("click", function(){});
 
 
+    document.addEventListener("backbutton", onBackKey, false);
+    function onBackKey(){
+        if(contbox.hasClass("cappear")){
+            contbox.removeClass("cappear");
+        }
+    }
+
     cont.on("click", function(){
         contbox.addClass("cappear");
         closecont.show();
