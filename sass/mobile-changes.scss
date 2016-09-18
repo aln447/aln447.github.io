@@ -1,0 +1,29 @@
+/*=============================*\
+    RESPONSIVE CHANGES
+
+    1000px -> Tablets
+    600px -> Smartphones
+
+\*==============================*/
+
+@media(max-width: 1000px){
+    .main-window-panels{
+        width: 100%;
+    }
+    #main-right-panel{
+        position: relative;
+        h1{font-size: 180%;}
+        h2{font-size: 100%;}
+    }
+
+
+    section{padding-right: 0;}
+}
+
+@media(max-width:600px){
+
+
+    //ICONS & IMAGES
+
+    i:before{margin: 0;}
+}

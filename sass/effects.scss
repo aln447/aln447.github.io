@@ -1,0 +1,16 @@
+.icon-text-box{
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.icon-text-box-left{
+    float: left;
+}
+.icon-text-box-right{
+    width: 60%;
+    float: left;
+    margin-left: 20px;
+    p{
+        margin: 5px;
+    }
+}

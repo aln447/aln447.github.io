@@ -1,0 +1,6 @@
+/*==========================*       MAIN WEBSITE PANEL
+\*==========================*/
+#main-window {
+  position: relative;
+  z-index: 15;
+}

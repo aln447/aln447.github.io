@@ -1,130 +1,250 @@
-<!DOCTYPE html>
-<html>
-  <head>
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
     <title>Alan Krygowski</title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Tymczasowe, proste portfolio grafika i web developera Alana Krygoskiego">
-    <meta name="keywords" content="web development, graphics, photoshop, design, coding, html, css. js">
+    <meta name="description" content="Front End Developer Portfolio">
     <meta name="author" content="Alan Krygowski">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans+Caption&amp;subset=latin,latin-ext">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="ico/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="ico/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="ico/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="ico/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="ico/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="ico/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="ico/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="ico/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="ico/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="ico/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="ico/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
-    <link rel="manifest" href="ico/manifest.json">
-    <meta name="msapplication-TileColor" content="#2C3E50">
-    <meta name="msapplication-TileImage" content="ico/ms-icon-144x144.png">
-    <meta name="theme-color" content="#2C3E50">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 
+    <!-- Fontello: -->
+    <link rel="stylesheet" href="css/fontello-embedded.css">
 
-  </head>
-  <body>
-    <div id="container">
-      <div id="behind">
-        <div id="wwwbox">
-          <h3>Strony WWW </h3>
-          <div class="wwfield"><a href="http://blizz-alankrg.rhcloud.com/website/" target="_blank" class="wlink">
-              <video poster="img/www/webm/blizz.png" loop class="sb prewww">
-                <source src="img/www/webm/blizz.webm">
-              </video></a>
-            <div class="text">
-              <p>Szablon Blogowy Blizzard </p><span title="WEBSITE INFO" class="thrd">...</span>
-              <div class="hidtxt">
-                <p>Prosty, responsywny szablon blogowy.</p>
-                <p>Posiada własny lightbox, paginację oraz możliwość wyszukiwania postów przez tagi lub podanie nazwy.</p><br>
-                <p class="bl">Projekt: Adobe Photoshop(własny)</p>
-                <p class="bl">Kodowanie: HTML5 | CSS3 | PHP5 | JAVASCRIPT | JQUERY | MYSQL</p>
-              </div>
+    <!-- Devicon: -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <div class="bg" id="bg-image"></div>
+    <div class="bg" id="bg-tint"></div>
+    <div id="main-window">
+        <header class="main-window-panels" id="main-right-panel">
+            <div class="inner-container">
+                <div id="profile-picture">
+                    <img src="img/prof.jpg" width="125px" height="125px" alt="profile image">
+                </div>
+                <h1>Alan Krygowski</h1>
+                <h2>Front-End Developer</h2>
+                <div class="links">
+                    <h3><a href="#">O mnie</a></h3>
+                    <h3><a href="#">Umiejętności</a></h3>
+                    <h3><a href="#">Prace</a></h3>
+                    <h3><a href="#">Kontakt</a></h3>
+                </div>
             </div>
-          </div>
-          <div class="wwfield"><a href="http://blizz-alankrg.rhcloud.com/" target="_blank" class="wlink">
-              <video poster="img/www/webm/blizzcms.png" loop class="sb prewww">
-                <source src="img/www/webm/blizzcms.webm">
-              </video></a>
-            <div class="text">
-              <p>Blizzard CMS</p><span title="WEBSITE INFO" class="thrd">...</span>
-              <div class="hidtxt">
-                <p>System zarządzania treścią stworzony pod szablon blogowy Blizzard</p>
-                <p>Do dostępnych funkcjonalności należy: Dodawanie, Edycja i Usuwanie artykółów oraz Dodawanie i Usuwanie tagów i folderów.</p><br>
-                <p class="rd">Aby uzyskać tymczasowe hasło skontaktuj się ze mną</p><br>
-                <p class="bl">Projekt: Adobe Photoshop(własny)</p>
-                <p class="bl">Kodowanie: HTML5 | CSS3 | PHP5 | AJAX | JAVASCRIPT | JQUERY | MYSQL</p>
-              </div>
+        </header>
+        <div class="main-window-panels" id="main-left-panel">
+            <div class="inner-container">
+                <section id="about-me">
+                    <div class="section-anchor"></div>
+                    <h2>O mnie</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam magnam veritatis enim illum repellendus, iusto quo similique doloribus id dolorum.</p>
+                    <h3>This is a sub section heading</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#">Doloremque</a>, ipsum.</p>
+                    <div class="section-bottom-line"></div>
+                </section>
+                <section id="skills">
+                    <div class="section-anchor"></div>
+
+                    <h2>Umiejętności</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam magnam veritatis enim illum repellendus, iusto quo similique doloribus id dolorum.</p>
+                    <h3>Work knowlege:</h3>
+                    <p class="icons">
+                        <i class="devicon-html5-plain"></i>
+                        <i class="devicon-css3-plain"></i>
+                        <i class="devicon-javascript-plain"></i>
+                        <i class="devicon-jquery-plain-wordmark"></i>
+                        <i class="devicon-sass-original"></i>
+                        <i class="devicon-less-plain-wordmark"></i>
+                        <i class="devicon-bootstrap-plain"></i>
+                    </p>
+                    <h3>Basic Knowlege</h3>
+                    <p class="icons">
+                        <i class="devicon-php-plain"></i>
+                        <i class="devicon-mysql-plain"></i>
+                        <i class="devicon-wordpress-plain"></i>
+                        <i class="devicon-python-plain"></i>
+                        <i class="devicon-git-plain"></i>
+                         <i class="devicon-c-plain"></i>
+                         <i class="devicon-cplusplus-plain"></i>
+                         <i class="devicon-java-plain"></i>
+                    </p>
+                    <h3>Software</h3>
+                    <div class="icons-software">
+
+                        <div class="icon-text-box flex-vert-center">
+                            <div class="icon-text-box-left">
+                                 <i class="devicon-atom-original"></i>
+                            </div>
+                            <div class="icon-text-box-right">
+                                <p>Głównie używany edytor tekstowy</p>
+                            </div>
+                        </div>
+
+                        <div class="icon-text-box flex-vert-center">
+                            <div class="icon-text-box-left">
+                                <i class="devicon-github-plain"></i>
+                            </div>
+                            <div class="icon-text-box-right">
+                                <p>Dobra znajomość</p>
+                            </div>
+                        </div>
+                        <div class="icon-text-box flex-vert-center">
+                            <div class="icon-text-box-left">
+                                <i class="devicon-photoshop-plain"></i>
+                            </div>
+                            <div class="icon-text-box-right">
+                                <p>Ponad 8 lat doświadczenia. Biegły w uzytkowaniu.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="icon-text-box flex-vert-center">
+                            <div class="icon-text-box-left">
+                                <i class="devicon-gimp-plain"></i>
+                            </div>
+                            <div class="icon-text-box-right">
+                                <p>Dobra znajomość</p>
+                            </div>
+                        </div>
+
+                        <div class="icon-text-box flex-vert-center">
+                            <div class="icon-text-box-left">
+                                 <i class="devicon-inkscape-plain"></i>
+                            </div>
+                            <div class="icon-text-box-right">
+                                <p>Ponad podstawowa znajomość</p>
+                            </div>
+                        </div>
+
+                        <div class="icon-text-box flex-vert-center">
+                            <div class="icon-text-box-left">
+                                 <i class="devicon-illustrator-plain"></i>
+                            </div>
+                            <div class="icon-text-box-right">
+                                <p>Podstawowa znajomość</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section-bottom-line"></div>
+                </section>
+
+
+                <section id="works">
+                    <div class="section-anchor"></div>
+                    <h2>Prace</h2>
+                    <h3>Strony Internetowe:</h3>
+                    <div class="works-gallery">
+                        <figure class="tint" onClick="sideScreen('blizz')">
+                            <img src="img/works/blizz-ipad-small.jpg" height="200" width="267" alt="Website thumbnail image">
+                        </figure>
+                        <figure class="tint" onClick="sideScreen('mbs16')">
+                            <img src="img/works/mbs16-ipad-small.jpg" height="200" width="267" alt="Website thumbnail image">
+                        </figure>
+                    </div>
+                    <h3>Projekty - Free Code Camp </h3>
+                    <div class="works-gallery">
+                        <a href="http://codepen.io/aln447/full/QEZVZY/" target="_blank" title="Hyperlink to the Wikipedia search app">
+                            <figure class="tint">
+                                <img src="img/works/codp-wikipedia.jpg" height="200" width="267">
+                            </figure>
+                        </a>
+                        <a href="http://codepen.io/aln447/full/KrOqJk/" target="_blank" title="Hyperlink to the Weather App">
+                            <figure class="tint">
+                                <img src="img/works/codp-weather.jpg" height="200" width="267">
+                            </figure>
+                        </a>
+                        <a href="http://codepen.io/aln447/full/KrOggx/" target="_blank" title="Hyperlink to the Random Quote Generator">
+                            <figure class="tint">
+                                <img src="img/works/codp-randquote.jpg" height="200" width="267">
+                            </figure>
+                        </a>
+                    </div>
+                </section>
+                <section id="contact">
+                    <h2>Kontakt</h2>
+                    <div class="icons-contact">
+                        <div class="icon-text-box flex-vert-center">
+                            <div class="icon-text-box-left">
+                                 <i class="icon-mail-alt"></i>
+                            </div>
+                            <div class="icon-text-box-right">
+                                <p><a href="mailto:aln447@gmail.com">aln447@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="icon-text-box flex-vert-center">
+                            <div class="icon-text-box-left">
+                                 <i class="icon-phone"></i>
+                            </div>
+                            <div class="icon-text-box-right">
+                                <p><a href="tel:+48505906315">505906315</a></p>
+                            </div>
+                        </div>
+                        <div class="icon-text-box flex-vert-center">
+                            <div class="icon-text-box-left">
+                                 <i class="icon-linkedin"></i>
+                            </div>
+                            <div class="icon-text-box-right">
+                                <p><a href="https://www.linkedin.com/in/alan-krygowski-39789a126">Alan Krygowski</a></p>
+                            </div>
+                        </div>
+                        <div class="icon-text-box flex-vert-center">
+                            <div class="icon-text-box-left">
+                                 <i class="icon-home"></i>
+                            </div>
+                            <div class="icon-text-box-right">
+                                <p>Kraków</p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>Napisz Do Mnie</h3>
+                    <form action="" id="contact-form">
+                        <p><label for="name">Twoje imię:</label><input type="text" name="name" placeholder="Alejandro Jodorowsky"></p>
+                        <p><label for="name">Twój e-mail:</label><input type="text" name="e-mail" placeholder="a.jodorowsky44@example.com"></p>
+                        <p><label for="name">Twoja wiadomośc:</label><textarea name="content" rows="5" placeholder="Witam. Piszę w sprawie....."></textarea></p>
+                        <p><a href='#' onclick='this.parentNode.submit(); return false;'>Wyślij</a></p>
+                    </form>
+                </section>
+                <footer>
+                    <p>Projekt i wykonanie strony: Alan Krygowski</p>
+                    <p><small>Przepraszam za typowo hipsterskie portfolio. Nigdy nawet nie byłem w Nowym Jorku</small></p>
+                </footer>
             </div>
-          </div>
-          <div class="icons"></div>
         </div>
-        <div id="grafbox">
-          <h3>Prace Graficzne</h3>
-          <div class="graffield"><img src="img/graf/s/baner.jpg" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/kalendarz1.jpg" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/bus_baner.png" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/bus_ulotka.png" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/bus_wizytowka.png" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/okladka_albumu.jpg" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/okladka_ksiazka.png" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/przewoz_baner.png" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/przewoz_ulotka.png" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/przewoz_wizytowka.png" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/stp2.jpeg" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/ulotka.jpg" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/vexel1.jpg" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/vexel2.jpg" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/wektor.jpg" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/logg2.jpg" alt="image" class="sb"></div>
-          <div class="graffield"><img src="img/graf/s/baner2.png" alt="image" class="sb"></div>
+    </div> <!--MAIN PANEL END -->
+    <div id="side-panel" class="flex-vert-center right-padding">
+        <div id="side-panel-inner-container" class="flex-vert-center">
+            <div id="side-panel-close" class="flex-vert-center" onClick="sideScreenClose()">
+                <i class="icon-left-big"></i>
+            </div>
+            <div id="side-panel-image-box">
+                <img src="" id="ipad-img" alt="Image of the website on an ipad size display">
+                <img src="" id="iphone-img"  class="right-padding" alt="Image of the website on an iphone size display">
+            </div>
+            <div id="side-panel-text-box">
+                <div id="text-box-inner-container" class="right-padding">
+                    <h2 id="work-title"></h2>
+                    <div id="work-description"></div>
+                    <h3>Technologie:</h3>
+                    <ul id="work-technologies">
+                    </ul>
+                    <h3><a id="work-site" href="#">Link do strony</a></h3>
+                </div>
+            </div>
         </div>
-      </div>
-      <div id="tbg">
-        <div id="returntbg" class="close"></div>
-        <div class="maincontent">
-          <h1>Alan Krygowski</h1>
-          <h2>&lt;grafik/web developer &gt;</h2>
-          <div class="mainctexts">
-            <p>Tu, pewnego dnia znajdzie się śliczne i pełnoprawne portfolio. </p>
-            <p>W międzyczasie jednak...</p>
-          </div>
-          <div class="twobox">
-            <button id="www" class="sb link1">STRONY WWW</button>
-            <button id="graf" class="sb link1">GRAFIKA</button>
-          </div>
-          <button id="cont" class="sb link2">KONTAKT</button>
-        </div><img id="arrow" src="img/arrow.png" alt="arrow">
-      </div>
-      <div id="preview">
-        <div id="close" class="close"></div>
-      </div>
-      <div id="expwww">
-        <div id="closewww">KLIKNIJ BY ZWINĄĆ</div>
-        <div id="expcontent"></div>
-      </div>
-      <div id="closecont" class="close"> </div>
-      <div id="contact">
-        <form action="" method="POST" class="inner">
-          <p class="header">Napisz Do Mnie </p>
-          <p class="head">Kim Jesteś?</p>
-          <input type="text" name="nazwa">
-          <p class="head">Twój E-Mail?</p>
-          <input type="text" name="email">
-          <p class="head">W czym mogę pomóc? :)</p>
-          <textarea name="tresc" maxlength="360" rows="3"></textarea>
-          <button id="send">Wyślij</button>
-        </form>
-      </div>
     </div>
-    <script src="jQuery.js"></script>
-    <script src="code.js"></script>
-  </body>
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/script.js"></script>
+
+
+</body>
 </html>

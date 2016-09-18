@@ -1,0 +1,59 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:400,700|Vollkorn:400,600';
+
+/*--------------------------------*\
+    BODY AND BACKGROUND SETTINGS
+
+    z-index: 7 -> background image
+    z-index: 8 -> background tint
+\*--------------------------------*/
+
+//THIS WEBSITE JUMPS TO MOBILE AT 1000px WIDTH!
+body, html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    color: #f1f1f1;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+body.hide-overflow{
+    overflow: hidden;
+}
+.bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+}
+#bg-image{
+    background-image: url("/img/bg/hd.jpg");
+    background-size: cover;
+    z-index: 7;
+}
+
+#bg-tint{
+    background: rgba(41, 52, 75, 0.85);
+    z-index: 8;
+}
+
+
+/*--------------------------*\
+    GLOBALLY USED EFFECTS
+\*--------------------------*/
+.flex-vert-center{
+    display: flex;
+    align-items: center;
+}
+
+@import "headings-links-paragraphs.scss";
+@import "components-main.scss";
+@import "components-side.scss";
+@import "sections.scss";
+@import "effects.scss";
+@import "mobile-changes.scss";
