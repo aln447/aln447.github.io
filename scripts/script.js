@@ -71,8 +71,64 @@ $(document).ready(function() {
         $(this).removeClass("colored");
     });
 
+    $("#contact-submit").on("click", function(){
+        var greenLight = 1;
+        var $contactName = $("#contact-name");
+        var $contactMail = $("#contact-mail");
+        var $contactMessage = $("#contact-message");
+
+        if($contactName.val().length == 0){
+            $contactName.attr("placeholder", "PROSZĘ UZUPEŁNIJ");
+            $contactName.css("border-color", "#bd3a3a");
+            greenLight = 0;
+        }else{
+            $contactName.css("border-color", "white");
+        }
+
+        if($contactMail.val().length == 0){
+            $contactMail.attr("placeholder", "PROSZĘ UZUPEŁNIJ");
+            $contactMail.css("border-color", "#bd3a3a");
+            greenLight = 0;
+        }else{
+            $contactMail.css("border-color", "white");
+        }
+
+        if($contactMessage.val().length == 0){
+            $contactMessage.attr("placeholder", "PROSZĘ UZUPEŁNIJ");
+            $contactMessage.css("border-color", "#bd3a3a");
+            greenLight = 0;
+        }else{
+            $contactMessage.css("border-color", "white");
+        }
+
+        if(greenLight){
+            $.ajax({
+                url: "https://formspree.io/aln447@gmail.com",
+                method: "POST",
+                data: {
+                    name: $contactName.val(),
+                    message: $contactMessage.val(),
+                    _replyto : $contactMail.val()
+                 },
+                dataType: "json",
+                success: function(){
+                    $("#contact-submit").text("Wysłano :)");
+                }
+            });
+        }
+
+    });
+
+    $("#side-panel-close").on('click', function() {
+        $("#main-window").removeClass("hide-main");
+        $("body").removeClass("hide-overflow");
+        $("#iphone-img").addClass("right-padding");
+        $("#text-box-inner-container").addClass("right-padding");
+        $("#side-panel").addClass("right-padding");
+    });
 
 });
+
 
 function sideScreen(subject){
     //assign values
@@ -97,13 +153,6 @@ function sideScreen(subject){
     $("#side-panel").removeClass("right-padding");
 }
 
-function sideScreenClose(){
-    $("#main-window").removeClass("hide-main");
-    $("body").removeClass("hide-overflow");
-    $("#iphone-img").addClass("right-padding");
-    $("#text-box-inner-container").addClass("right-padding");
-    $("#side-panel").addClass("right-padding");
-}
 
 
 //SMOOTH SCROLLING STOLEN FROM CSSTRICKS

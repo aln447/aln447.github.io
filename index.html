@@ -18,6 +18,8 @@
     <!-- Devicon: -->
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif&subset=latin-ext" rel="stylesheet">
+
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
   <![endif]-->
@@ -50,16 +52,35 @@
         <div class="main-window-panels" id="main-left-panel">
             <div class="inner-container">
                 <section id="about-me">
-                    <h2>O mnie</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam magnam veritatis enim illum repellendus, iusto quo similique doloribus id dolorum.</p>
-                    <h3>This is a sub section heading</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <a href="#">Doloremque</a>, ipsum.</p>
+                    <h2>Witam</h2>
+                    <p>
+                        Nazywam się Alan i pochodzę z małej wsi na południu Polski. Aktualnie mieszkam i uczę się w Krakowie.
+                    </p>
+                    <p>
+                        Studiuję informatykę ze specjalnością multimedia i technologie internetowe na Uniwersytecie Pedagogicznym im. KEN.
+                    </p>
+                    <br />
+                    <p>
+                        Web developmentem zajmuję się już od ponad roku. Wcześniej pracowałem hobbistycznie nad programowaniem w języku c++ do gier komputerowych. Więcej informacji w sekcji <a href="#skills">umiejętności.</a>
+                    </p>
+                    <br />
+                    <h3>A poza pracą?</h3>
+                    <p>Nie lubię się nudzić.</p>
+                    <p>
+                        Jeśli nie jestem zajęty pracą lubię spędzać czas z bliskimi lub robić cokolwiek, byle produktywnego.
+                    </p>
+                    <p>
+                        Gram na perkusji, hobbistycznie piszę scenariusze, czasem coś narysuje.
+                    </p>
+                    <p>
+                        Jestem osobą z natury ciekawską i pomysłową.
+                    </p>
                     <div class="section-bottom-line"></div>
                 </section>
                 <section id="skills">
 
                     <h2>Umiejętności</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam magnam veritatis enim illum repellendus, iusto quo similique doloribus id dolorum.</p>
+                    <p>W pracy cenię sobie minimalizm i przejrzystość kodu. </p>
                     <h3>Work knowlege:</h3>
                     <p class="icons">
                         <i class="devicon-html5-plain" title="HTML5"></i>
@@ -212,11 +233,11 @@
                         </div>
                     </div>
                     <h3>Napisz Do Mnie</h3>
-                    <form action="https://formspree.io/aln447@gmail.com" id="contact-form">
-                        <p><label for="name">Twoje imię:</label><input type="text" name="name" placeholder="Alejandro Jodorowsky"></p>
-                        <p><label for="name">Twój e-mail:</label><input type="email" name="_replyto" placeholder="a.jodorowsky44@example.com"></p>
-                        <p><label for="name">Twoja wiadomośc:</label><textarea name="message" rows="5" placeholder="Witam. Piszę w sprawie....."></textarea></p>
-                        <p><a href='#' onclick='this.parentNode.parentNode.submit(); return false;'>Wyślij</a></p>
+                    <form action="https://formspree.io/aln447@gmail.com" method="POST" id="contact-form">
+                        <p><label for="name">Twoje imię:</label><input type="text" name="name" id="contact-name" placeholder="Alejandro Jodorowsky" required ></p>
+                        <p><label for="name">Twój e-mail:</label><input type="email" name="_replyto"  id="contact-mail" placeholder="a.jodorowsky44@example.com" required ></p>
+                        <p><label for="name">Twoja wiadomośc:</label><textarea name="message" rows="5"  id="contact-message" placeholder="Witam. Piszę w sprawie....." required ></textarea></p>
+                        <p><a href='javascript:void(0)' id="contact-submit">Wyślij</a></p>
                     </form>
                 </section>
                 <footer>
@@ -228,7 +249,7 @@
     </div> <!--MAIN PANEL END -->
     <div id="side-panel" class="flex-vert-center right-padding">
         <div id="side-panel-inner-container" class="flex-vert-center">
-            <div id="side-panel-close" class="flex-vert-center" onClick="sideScreenClose()">
+            <div id="side-panel-close" class="flex-vert-center" >
                 <i class="icon-left-big"></i>
             </div>
             <div id="side-panel-image-box">
