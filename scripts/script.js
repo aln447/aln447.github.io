@@ -12,8 +12,8 @@ works = {
         '<p>Prosty szablon blogowy stworzony głównie jako ćwiczenie z języka PHP i mySQL. Strona posiada własny podstawowy cms dostępny pod tym linkiem umożliwiający dodawanie i edycje zdjęć i postów. Sama strona posiada własny moduł wyszukiwała postów przez tytuł lub tagi oraz paginacje</p><p>Projekt i wykonanie własne</p>',
         ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Ajax', 'Php5', 'MySQL'],
         'http://blizz-alankrg.rhcloud.com/website/',
-        'img/works/blizz-ipad-big.jpg',
-        'img/works/blizz-iphone-big.jpg'
+        'img/works/blizz-ipad-big.JPG',
+        'img/works/blizz-iphone-big.JPG'
     ],
     'mbs16':[
         'Sklep Mobilne Studio 16',
@@ -114,7 +114,7 @@ $(function() {
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top-50
         }, 1000);
         return false;
       }
