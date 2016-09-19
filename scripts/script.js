@@ -22,10 +22,46 @@ works = {
         'http://mobilnestudio16.pl/',
         'img/works/mbs16-ipad-big.jpg',
         'img/works/mbs16-iphone-big.jpg'
+    ],
+    'lorem':[
+        'Loremville Guest House',
+        '<p>Prosta strona-wizytówka dla pensjonatu</p><p>Projekt i wykonanie własne</p>',
+        ['HTML5', 'CSS3', 'JavaScript', 'jQuery'],
+        'http://alankrg.me/Lorem-Guest-House/',
+        'img/works/lorem-ipad-big.jpg',
+        'img/works/lorem-iphone-big.jpg'
     ]
 };
 $(document).ready(function() {
 
+    //CHANGE BACKGROUND COLOR ON SCROLLING
+    var aboutScrollTop = $("#about-me").offset().top;
+    var skillsScrollTop = $("#skills").offset().top;
+    var worksScrollTop = $("#works").offset().top;
+    var contactScrollTop = $("#contact").offset().top;
+    var scroll = 0;
+
+    scrollBgColor();
+    $(window).on("scroll", function(){
+        scrollBgColor();
+    });
+
+    function scrollBgColor(){
+        scroll = $(window).scrollTop();
+
+        if(scroll > aboutScrollTop && scroll < skillsScrollTop){
+            $("#skills-tint").css("opacity", (scroll-aboutScrollTop)/(skillsScrollTop-aboutScrollTop));
+        }
+
+        if(scroll > skillsScrollTop && scroll < worksScrollTop){
+            $("#works-tint").css("opacity", (scroll-skillsScrollTop)/(worksScrollTop-skillsScrollTop));
+        }
+
+        if(scroll > worksScrollTop && scroll < contactScrollTop){
+            $("#contact-tint").css("opacity", (scroll-worksScrollTop)/(contactScrollTop-worksScrollTop));
+        }
+
+    }
 
     //CHANGING ICON COLORS ON HOVER
     $("i").on("mouseover", function(){
