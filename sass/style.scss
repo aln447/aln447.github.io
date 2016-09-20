@@ -69,7 +69,32 @@ body.hide-overflow{
     opacity: 0;
 }
 
+#lang-link{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5555;
+    padding: 10px;
+}
 
+#mobile-nav-bar{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    background: #29344b;
+    height: 30px;
+    width: 100%;
+    z-index: 999;
+    .mobile-nav-link{
+        float: left;
+        width: 25%;
+        text-align: center;
+        a{
+            font-weight: normal;
+            font-size: 80%;
+        }
+    }
+}
 /*--------------------------*\
     GLOBALLY USED EFFECTS
 \*--------------------------*/

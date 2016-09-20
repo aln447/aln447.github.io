@@ -2,12 +2,16 @@ works = {
     /*
         works[title][0] - Website/Project Name
         works[title][1] - Description
-        works[title][2] - Technologies(array)
-        works[title][3] - Href
-        works[title][4] - Image - BIG
-        works[title][5] - Image - SMALL
+        works[title][2] - Website/Project Name (POLISH)
+        works[title][3] - Description (POLISH)
+        works[title][4] - Technologies(array)
+        works[title][5] - Href
+        works[title][6] - Image - BIG
+        works[title][7] - Image - SMALL
     */
     'blizz':[
+        'Blizzard Blog',
+        '<p>A simple blog template created mainly as a Php and MySQL exercise. The blog has its own simple CMS giving the ability to add and modify posts and image folders. The website itself has a self made search by post title or tag, and a has pagination.</p><p>Design and development by me</p>',
         'Szablon Blogowy Blizzard',
         '<p>Prosty szablon blogowy stworzony głównie jako ćwiczenie z języka PHP i mySQL. Strona posiada własny podstawowy cms dostępny pod tym linkiem umożliwiający dodawanie i edycje zdjęć i postów. Sama strona posiada własny moduł wyszukiwała postów przez tytuł lub tagi oraz paginacje</p><p>Projekt i wykonanie własne</p>',
         ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Ajax', 'Php5', 'MySQL'],
@@ -16,14 +20,18 @@ works = {
         'img/works/blizz-iphone-big.JPG'
     ],
     'mbs16':[
+        'Mobilne Studio 16 Store',
+        'The online store “Mobilne Studio 16” gives users the ability to pick, book and pay for different beauty and health treatments. Everything running on WordPress and a modified version of the WooCommerce plugin</p><p>Co-created with <a href="mailto: arkadiusm@gmail.com">Arkadiusz Mierzwa</a></p>',
         'Sklep Mobilne Studio 16',
-        '<p>Sklep internetowy Mobilnego Studia 16 pozwalał klientom wybierać, rezerwować i płacić za zabiegi pielęgnacyjne. Wszystko oparte o zmodyfikowaną wtyczkę WooCommerce </p><p>Wykonano współpracy z <a href="mailto: arkadiusm@gmail.com">Arkadiusz Mierzwa</a>. Projekt i wykonanie własne </p>',
+        '<p>Sklep internetowy Mobilnego Studia 16 pozwalał klientom wybierać, rezerwować i płacić za zabiegi pielęgnacyjne. Wszystko oparte o zmodyfikowaną wtyczkę WooCommerce </p><p>Wykonano współpracy z . Projekt i wykonanie własne </p>',
         ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Ajax', 'Php5', 'Wordpress', 'WooCommerce'],
         'http://mobilnestudio16.pl/',
         'img/works/mbs16-ipad-big.jpg',
         'img/works/mbs16-iphone-big.jpg'
     ],
     'lorem':[
+        'Loremville Guest House',
+        '<p>A simple guest house website</p><p>Design and development by me</p>',
         'Loremville Guest House',
         '<p>Prosta strona-wizytówka dla pensjonatu</p><p>Projekt i wykonanie własne</p>',
         ['HTML5', 'CSS3', 'JavaScript', 'jQuery'],
@@ -78,7 +86,7 @@ $(document).ready(function() {
         var $contactMessage = $("#contact-message");
 
         if($contactName.val().length == 0){
-            $contactName.attr("placeholder", "PROSZĘ UZUPEŁNIJ");
+            $contactName.attr("placeholder", "!!!");
             $contactName.css("border-color", "#bd3a3a");
             greenLight = 0;
         }else{
@@ -86,7 +94,7 @@ $(document).ready(function() {
         }
 
         if($contactMail.val().length == 0){
-            $contactMail.attr("placeholder", "PROSZĘ UZUPEŁNIJ");
+            $contactMail.attr("placeholder", "!!!");
             $contactMail.css("border-color", "#bd3a3a");
             greenLight = 0;
         }else{
@@ -94,7 +102,7 @@ $(document).ready(function() {
         }
 
         if($contactMessage.val().length == 0){
-            $contactMessage.attr("placeholder", "PROSZĘ UZUPEŁNIJ");
+            $contactMessage.attr("placeholder", "!!!");
             $contactMessage.css("border-color", "#bd3a3a");
             greenLight = 0;
         }else{
@@ -112,7 +120,7 @@ $(document).ready(function() {
                  },
                 dataType: "json",
                 success: function(){
-                    $("#contact-submit").text("Wysłano :)");
+                    $("#contact-submit").html("<h2>✔</h2>");
                 }
             });
         }
@@ -130,20 +138,26 @@ $(document).ready(function() {
 });
 
 
-function sideScreen(subject){
+function sideScreen(subject, pol){
     //assign values
-    $("#work-title").text(works[subject][0]);
-    $("#work-description").html(works[subject][1]);
+    if(!pol){
+        $("#work-title").text(works[subject][0]);
+        $("#work-description").html(works[subject][1]);
+    }else{
+        $("#work-title").text(works[subject][2]);
+        $("#work-description").html(works[subject][3]);
+    }
+
 
     var technologies = "";
-    for (var i = 0; i < works[subject][2].length; i++){
-        technologies += "<li>" + works[subject][2][i] + "</li>";
+    for (var i = 0; i < works[subject][4].length; i++){
+        technologies += "<li>" + works[subject][4][i] + "</li>";
     }
     $("#work-technologies").html(technologies);
 
-    $("#work-site").attr("href", works[subject][3]);
-    $("#ipad-img").attr("src", works[subject][4]);
-    $("#iphone-img").attr("src", works[subject][5]);
+    $("#work-site").attr("href", works[subject][5]);
+    $("#ipad-img").attr("src", works[subject][6]);
+    $("#iphone-img").attr("src", works[subject][7]);
 
     //display everything
     $("#main-window").addClass("hide-main");
