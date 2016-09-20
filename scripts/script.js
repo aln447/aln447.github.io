@@ -11,9 +11,9 @@ works = {
     */
     'blizz':[
         'Blizzard Blog',
-        '<p>A simple blog template created mainly as a Php and MySQL exercise. The blog has its own simple CMS giving the ability to add and modify posts and image folders. The website itself has a self made search by post title or tag, and a has pagination.</p><p>Design and development by me</p>',
+        '<p>A simple blog template created mainly as a Php and MySQL exercise. The blog has its own simple CMS <a href="http://blizz-alankrg.rhcloud.com">avaible here </a>giving the ability to add and modify posts and image folders. The website itself has a self made search by post title or tag, and a has pagination.</p><p>Design and development by me</p>',
         'Szablon Blogowy Blizzard',
-        '<p>Prosty szablon blogowy stworzony głównie jako ćwiczenie z języka PHP i mySQL. Strona posiada własny podstawowy cms dostępny pod tym linkiem umożliwiający dodawanie i edycje zdjęć i postów. Sama strona posiada własny moduł wyszukiwała postów przez tytuł lub tagi oraz paginacje</p><p>Projekt i wykonanie własne</p>',
+        '<p>Prosty szablon blogowy stworzony głównie jako ćwiczenie z języka PHP i mySQL. Strona posiada własny podstawowy cms dostępny <a href="http://blizz-alankrg.rhcloud.com">pod tym linkiem</a> umożliwiający dodawanie i edycje zdjęć i postów. Sama strona posiada własny moduł wyszukiwała postów przez tytuł lub tagi oraz paginacje</p><p>Projekt i wykonanie własne</p>',
         ['HTML5', 'CSS3', 'JavaScript', 'jQuery', 'Ajax', 'Php5', 'MySQL'],
         'http://blizz-alankrg.rhcloud.com/website/',
         'img/works/blizz-ipad-big.JPG',
