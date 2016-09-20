@@ -27,8 +27,9 @@ body.hide-overflow{
     position: fixed;
     width: 110%;
     height: 110%;
-    bottom: 0px;
+    top: 0px;
     left: 0px;
+    transition: height 1s;
 }
 #bg-image{
     background-image: url("/img/bg/hd.jpg");
