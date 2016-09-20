@@ -31,9 +31,9 @@ works = {
     ],
     'lorem':[
         'Loremville Guest House',
-        '<p>A simple guest house website</p><p>Design and development by me</p>',
+        '<p>A simple guest house website</p><p>Design and development by me</p><p><a href="https://github.com/aln447/Lorem-Guest-House">Github Page</a></p>',
         'Loremville Guest House',
-        '<p>Prosta strona-wizytówka dla pensjonatu</p><p>Projekt i wykonanie własne</p>',
+        '<p>Prosta strona-wizytówka dla pensjonatu</p><p>Projekt i wykonanie własne</p><p><a href="https://github.com/aln447/Lorem-Guest-House">Github</a></p>',
         ['HTML5', 'CSS3', 'JavaScript', 'jQuery'],
         'http://alankrg.me/Lorem-Guest-House/',
         'img/works/lorem-ipad-big.jpg',
