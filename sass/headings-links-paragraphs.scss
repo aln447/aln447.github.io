@@ -32,8 +32,5 @@ a:hover:after {
 }
 
 p{
-    text-align: justify;
-    -moz-text-align-last: left; /* Code for Firefox */
-    -webkit-text-align-last: left; /* Code for Firefox */
-    text-align-last: left;
+    text-align: left;
 }

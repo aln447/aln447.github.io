@@ -85,7 +85,8 @@ body.hide-overflow {
   position: fixed;
   bottom: 0;
   background: #29344b;
-  height: 30px;
+  padding-top: 5px;
+  height: 35px;
   width: 100%;
   z-index: 999;
 }
@@ -149,12 +150,7 @@ a:hover:after {
 }
 
 p {
-  text-align: justify;
-  -moz-text-align-last: left;
-  /* Code for Firefox */
-  -webkit-text-align-last: left;
-  /* Code for Firefox */
-  text-align-last: left;
+  text-align: left;
 }
 
 /*==========================*       MAIN WEBSITE PANEL
@@ -194,7 +190,7 @@ p {
 }
 
 #main-right-panel h1 {
-  margin-bottom: -10px;
+  margin-bottom: -5px;
   margin-top: 10px;
 }
 

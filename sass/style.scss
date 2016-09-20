@@ -49,22 +49,22 @@ body.hide-overflow{
 }
 
 #about-me-tint{
-    background: lighten(#29344b, 10%);
+    background: #3b4b6c;
     z-index: 30;
     opacity: 1;
 }
 #skills-tint{
-    background: lighten(#26362d, 10%);
+    background: #3b5446;
     z-index: 31;
     opacity: 0;
 }
 #works-tint{
-    background: lighten(#362626, 10%);
+    background: #543b3b;
     z-index: 32;
     opacity: 0;
 }
 #contact-tint{
-    background: lighten(#263633, 10%);
+    background: #3b544f;
     z-index: 33;
     opacity: 0;
 }
@@ -82,7 +82,8 @@ body.hide-overflow{
     position: fixed;
     bottom: 0;
     background: #29344b;
-    height: 30px;
+    padding-top: 5px;
+    height: 35px;
     width: 100%;
     z-index: 999;
     .mobile-nav-link{
